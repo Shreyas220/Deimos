@@ -27,7 +27,11 @@ cd deimos
 helm install deimos ./deimos/ --set config.syslog.host=syslog-server-service.default.svc.cluster.local --set config.syslog.port=514 --set config.syslog.format=cef --set config.syslog.protocol=udp -n kube-system
 ```
 
-To send alerts or log syslog you need these 4 parameters 
+#### By default only alerts are enabled. To enable logs please add ` --set config.log=true `
+
+
+
+##### To send alerts or log syslog you need these 4 parameters 
 - host - ip address we are sending the events to. In k8s env the syslog server would have a service, you can provide the that here
 - Port
 - format: it supports 2 format 1)JSON 2)CEF. By default it is JSON please mention cef if you want to use it
