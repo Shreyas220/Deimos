@@ -22,9 +22,9 @@ git clone https://github.com/Shreyas220/Deimos.git
 git clone https://github.com/Shreyas220/Deimos.git
 cd deimos
 ```
-
+(this is example please change parameters)
 ```
-helm install deimos ./helm/deimos/ --set config.syslog.host=syslog-server-service.default.svc.cluster.local --set config.syslog.port=514 --set config.syslog.format=cef --set config.syslog.protocol=udp --set config.policyreport.enabled=true -n kube-system
+helm install deimos ./deimos/ --set config.syslog.host=syslog-server-service.default.svc.cluster.local --set config.syslog.port=514 --set config.syslog.format=cef --set config.syslog.protocol=udp --set config.policyreport.enabled=true -n kube-system
 ```
 
 To send alerts or log syslog you need these 4 parameters 
